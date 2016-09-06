@@ -1,0 +1,93 @@
+
+<html>
+	<head>
+		<title>Bukti Pemesanan</title>
+	</head>
+	<body>
+		<hr width="20%" align="left">
+		<h2>Bukti Pemesanan</h2>
+		<hr width="20%" align="left">
+		
+		<?php
+			$id = $_POST["id"];
+			$nama = $_POST["nama"];
+			$alamat = $_POST["alamat"];
+			$tanggal = $_POST["tanggal"];
+			$menu = $_POST["menu"];
+			$pembayaran = $_POST["pembayaran"];
+			$jumlah = $_POST["jumlah"];
+			//$bayar = 0;
+			//$potongan = 0;
+			
+			echo ("ID Pesanan: ".$id."</br>");
+			echo ("Nama Pemesan : ".$nama."</br>");
+			echo ("Alamat Kirim: ".$alamat."</br>");
+			echo ("Tanggal Diantar : ".$tanggal."</br>");
+			echo ("Menu : ".$menu."</br>");
+			if(isset($_POST['submit'])){
+				echo ("Tambahan Menu : ");
+				if(isset($_POST['menu_tambah1'])){
+						echo $_POST['menu_tambah1']."; ";
+					}
+				if(isset($_POST['menu_tambah2'])){
+						echo $_POST['menu_tambah2']."; ";
+					}
+				if(isset($_POST['menu_tambah3'])){
+						echo $_POST['menu_tambah3']."; ";
+					}
+				echo "</br>";
+				}
+			echo ("Pembayaran : ".$pembayaran."</br>");
+			echo ("Jumlah Pesanan : ".$jumlah."</br>");
+			echo ("<hr width='20%' align='left'>");
+			
+			//Logika untuk pembayaran
+			/* jika jumlah yang dipesan lebih dari 30 
+			maka akan mendapat diskon 5%*/
+			
+			if ($jumlah < 30 ){
+				if ($menu == "Nasi Ayam"){
+					$bayar = $jumlah*15000;
+					echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : 0 </br>");
+					echo ("total : ".$bayar."</br>");
+				} if ($menu == "Nasi Bebek"){
+					$bayar = $jumlah*20000;
+					echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : 0 </br>");
+					echo ("total : ".$bayar."</br>");
+				} if ($menu == "Nasi Rendang"){
+					$bayar = $jumlah*25000;
+					echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : 0 </br>");
+					echo ("total : ".$bayar."</br>");
+				}	
+			} else {
+				if ($menu == "Nasi Ayam"){
+					$bayar = $jumlah*15000;
+					$potongan = $bayar*0.05;
+					$total = $bayar - $potongan;
+				 	echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : ".$potongan."</br>");
+					echo ("Total : ".$total."</br>");
+				} if ($menu == "Nasi Bebek"){
+					$bayar = $jumlah*20000;
+					$potongan = $bayar*0.05;
+					$total = $bayar - $potongan;
+					echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : ".$potongan."</br>");
+					echo ("total : ".$total."</br>");
+				} if ($menu == "Nasi Rendang"){
+					$bayar = $jumlah*25000;
+					$potongan = $bayar*0.05;
+					$total = $bayar - $potongan;
+					echo ("Bayar : ".$bayar."</br>");
+					echo ("Potongan : ".$potongan."</br>");
+					echo ("total : ".$total."</br>");
+				}
+			}
+			echo ("<hr width='20%' align='left'></br>");
+		?>
+		<a href="index.php" alt="Back home"><< Kembali >></a>
+	</body>
+</html>

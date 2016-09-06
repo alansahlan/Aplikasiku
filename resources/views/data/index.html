@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Selamat Datang</title>
+	</head>
+	<body>
+		<h2>Pemesanan Makanan On-Line</h2>
+		<form action="hasil.php" method="POST">
+			ID Pemesanan : <input type="text" name="id">	<!--text field-->
+			</br></br>
+			Nama Pemesanan : <input type="text" name="nama">	<!--text field-->
+			</br></br>
+			Alamat Kirim : <textarea name="alamat"></textarea>	<!--textarea field-->
+			</br></br>
+			Tanggal Diantar : <input type="text" name="tanggal" value="dd/mm/yy"> <!--text field-->
+			</br></br>
+			Menu Makanan : <select name="menu">		<!--dropdown-->
+				<option value="Nasi Ayam">Nasi Ayam</option>
+				<option value="Nasi Bebek">Nasi Bebek</option>
+				<option value="Nasi Rendang">Nasi Rendang</option>
+			</select></br></br>
+			Tambahan Menu : </br> <!--dropdown-->
+			<input type="checkbox" name="menu_tambah1" value="Sambal"> Sambal <br>
+			<input type="checkbox" name="menu_tambah2" value="Lalapan"> Lalapan <br>
+			<input type="checkbox" name="menu_tambah3" value="Krupuk"> Krupuk
+			<br><br>
+			Pembayaran : </br> <!--radio-->
+			<input type="radio" name="pembayaran" value="Dana Dimuka (DP)" checked>Dana Dimuka</br>
+			<input type="radio" name="pembayaran" value="Transfer">Transfer</br>
+			<input type="radio" name="pembayaran" value="Tunai">Tunai
+			</br></br>
+			Jumlah Pesanan : <input type="text" name="jumlah"> <!--text area-->
+			</br></br>
+			<!--submit button-->
+			<input type="submit" name="submit" value="Pesan">&nbsp;&nbsp;
+			<!--reset button-->
+			<input type="reset" name="reset" value="Batal">
+		</form>
+	</body>
+</html>

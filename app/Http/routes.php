@@ -1,5 +1,5 @@
 <?php
-
+   
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -15,7 +15,7 @@
 //});
 
 Route::get('/', 'AuthController@login');
-
+ 
 Route::group(['middleware'=>['web']],function(){
 	Route::get('/login',['as'=>'login', 'uses' => 'AuthController@login']);
 	Route::post('/handleLogin',['as'=>'handleLogin', 'uses' => 'AuthController@handleLogin']);
@@ -29,9 +29,14 @@ Route::get('down',function(){
     return view('welcome');
 });
 
-Route::get('/entry','DataController@entry');
-Route::get('/masuk','DataController@pemasukan');
-Route::get('/keluar','DataController@pengeluaran');
-Route::get('database','SapaController@index');
-Route::post('sapa/insert','SapaController@insert');
+Route::get('entry','DataController@entry');
+Route::get('masuk','DataController@pemasukan');
+Route::get('keluar','DataController@pengeluaran');
+Route::get('laporan/in','DataController@laporanin');
+Route::get('hapus/{id}','DataController@hapus');
+
+Route::post('data/insert','DataController@insert');
+Route::get('read',function(){
+	return view('read');
+});
 Route::get('sapa/delete/{id}', 'SapaController@delete');

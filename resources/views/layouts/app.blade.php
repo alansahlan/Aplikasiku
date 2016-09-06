@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{URL('/assets/css/bootstrap.min.css')}}">
-
+ 
     <style>
         body {
             font-family: 'Lato';
@@ -77,8 +77,8 @@
                                 Laporan <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="button">
-                                <li><a href="{{ url('/masuk') }}">Laporan Pemasukan </a></li>
-                                <li><a href="{{ url('/keluar') }}">Laporan Pengeluaran</a></li>
+                                <li><a href="{{ url('/laporan/in') }}">Laporan Pemasukan </a></li>
+                                <li><a href="{{ url('/laporan/out') }}">Laporan Pengeluaran</a></li>
                                 <li><a href="{{ url('/home') }}">Semua Laporan </a></li>
                             </ul>   
                     
