@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RS.Kartika Husada</title>
+    <title>Working Place</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{URL('/assets/fonts/font/fonts/fontawesome-webfont.eot')}}">
@@ -28,18 +28,15 @@
             border-radius: 60px;
 
         }
-        a{
-            color: white;
-        }
     </style>
 </head>
 <body id="app-layout">
 
-    <nav class="navbar navbar-default navbar-static-top"  style="background-color:#ffffff; ">
+    <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
             <a class="navbar-brand" href="#">
-            <img class="circle" src="{{URL('/images/logo.jpg')}} " width="50px" height="60px">
+            <img src="{{URL('/images/brand.png')}}">
             </a>
 
                 <!-- Collapsed Hamburger -->
@@ -52,33 +49,42 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                RS. Kartika Husada Tambun
+                    APLIKASI KEUANGAN
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav" >
+                <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Beranda</a></li>
-                    <li><a href="{{ URL('/jadwal')}}">Jadwal Dokter </a></li>
-                    <li><a href="{{ URL('/check/room')}}"> Cek Kamar</a></li> 
-                            <!--<ul class="dropdown-menu" role="button">
-                                <li><a href="{{ url('/masuk') }}">Rawat Inap</a></li>
-                                <li><a href="{{ url('/keluar') }}">Rawat Jalan</a></li>
-                            </ul>  --> 
                     <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Layanan <span class="caret"></span>
+                                Referansi<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="button">
-                                <li><a href="{{ url('/data/dokter') }}">Insert Data Dokter</a></li>
-                                <li><a href="{{ url('/data/kamar') }}">Insert Data Kamar</a></li>
-                                <li><a href="{{ url('/show/room') }}">Show Data Kamar</a></li>
+                                <li><a href="{{ url('/home') }}">Kode Klasifikasi</a></li>
+                            </ul>  
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Transaksi <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="button">
+                                <li><a href="{{ url('/masuk') }}">Pemasukan </a></li>
+                                <li><a href="{{ url('/keluar') }}">Pengeluaran</a></li>
+                            </ul>   
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Laporan <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="button">
+                                <li><a href="{{ url('/laporan/in') }}">Laporan Pemasukan </a></li>
+                                <li><a href="{{ url('/laporan/out') }}">Laporan Pengeluaran</a></li>
+                                <li><a href="{{ url('/home') }}">Semua Laporan </a></li>
                             </ul>   
                     
                     <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Kontak <span class="caret"></span>
+                                Pengaturan <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="button">
                                 <li><a href="{{ url('/home') }}">Instansi Pengguna </a></li>
