@@ -3,7 +3,7 @@
 @section('content')
 <style type="text/css">
 	body {
-		background-image: url('../public/images/h10.jpg');
+		background-image: url('../public/images/background.jpg');
         background-size: cover;
 	}
 	h2{
@@ -13,7 +13,7 @@
 	}
 </style>
 <br/>
-<h2>Aplikasi Sederhana M.Sahlan</h2>
+<h2></h2>
 <br/>
 	<div class="container">
 		<div class="append-icon">
@@ -23,7 +23,7 @@
         		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             		<div class="panel panel-default">
               		<div class="panel-heading">
-                	<h4 class="panel-title">Login</h4>   
+                	<h4 class="panel-title">Login Admin</h4>   
                     </div>
               	<div class="panel-body">
                 <div class="row">
@@ -53,7 +53,7 @@
 	{!! Form::token() !!}
 
 	 <button type="submit" class="btn btn-primary " > Login  <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></button>
-	 {{ link_to_route('users.create','New User') }}
+	 <!--{{ link_to_route('users.create','New User') }} -->
 {!! Form::close() !!}
 					</div>
 					</div>

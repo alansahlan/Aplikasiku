@@ -14,7 +14,7 @@
   //  return view('welcome');
 //});
 
-Route::get('/', 'AuthController@login');
+Route::get('/reservasii', 'AuthController@login');
  
 Route::group(['middleware'=>['web']],function(){
 	Route::get('/login',['as'=>'login', 'uses' => 'AuthController@login']);
@@ -42,6 +42,12 @@ Route::get('sapa/delete/{id}', 'SapaController@delete');
 */
 Route::get('data/dokter',function(){
 	return view('rs.datadokter');
+});
+Route::get('/reservasi',function(){
+	return view('rs.reservasi');
+});
+Route::get('/',function(){
+	return view('users.home');
 });
 Route::get('data/kamar',function(){
 	return view('rs.datakamar');
